@@ -6,6 +6,7 @@ import 'package:foodcafe/resource/style.dart';
 import 'package:foodcafe/resource/value.dart';
 import 'package:get/get.dart';
 import 'package:foodcafe/utils/extensions.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SignUpPage extends StatefulWidget {
   @override
@@ -25,21 +26,21 @@ class _SignUpState extends State<SignUpPage> {
   _formUI() => Obx(() => Container(
       padding: EdgeInsets.all(20),
       child: Column(children: <Widget>[
-        widget.size(heightScale: 50.0),
+        widget.size(heightScale: Get.height / 12),
         _formIcon(),
         Padding(
-            padding: EdgeInsets.all(10),
+            padding: EdgeInsets.all(10.h),
             child: Text(labelSignUpContent,
                 textAlign: TextAlign.center, style: appBarTitleStyle)),
-        widget.size(heightScale: 30.0),
+        widget.size(heightScale: 30.0.h),
         _userNameInput(),
         _emailInput(),
         _passwordInput(),
         _confirmPassword(),
         _mobileInput(),
-        widget.size(heightScale: 20.0),
+        widget.size(heightScale: 30.0.h),
         _signUpPress(),
-        SizedBox(height: 10.0)
+        SizedBox(height: 10.0.h)
       ])));
 
   _formIcon() => Center(

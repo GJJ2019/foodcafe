@@ -3,7 +3,5 @@ import 'package:get/get.dart';
 
 class SignUpBinding extends Bindings {
   @override
-  void dependencies() {
-    Get.lazyPut(() => SingUpController());
-  }
+  void dependencies() => Get.lazyPut(() => SingUpController());
 }

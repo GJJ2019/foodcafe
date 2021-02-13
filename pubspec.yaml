@@ -38,6 +38,7 @@ dependencies:
   scrollable_positioned_list:
   json_annotation:
   rename:
+  flutter_screenutil:
 
 dev_dependencies:
   flutter_test:

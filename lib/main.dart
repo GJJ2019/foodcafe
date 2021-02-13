@@ -3,6 +3,7 @@ import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_screenutil/screenutil_init.dart';
 import 'package:foodcafe/dependency_injection.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
@@ -38,31 +39,31 @@ Future<void> main() async {
   runApp(MyApp());
 }
 
-Future<void> _firebaseMessagingBackgroundHandler(
-    RemoteMessage message) async {
+Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
   await Firebase.initializeApp();
 }
 
 class MyApp extends StatelessWidget {
   @override
-  Widget build(BuildContext context) {
-    return GetMaterialApp(
-        debugShowCheckedModeBanner: false,
-        enableLog: true,
-        theme: ThemeData(
-          /*colorScheme: ColorScheme.light(
+  Widget build(BuildContext context) => ScreenUtilInit(
+      designSize: const Size(750, 812),
+      allowFontScaling: false,
+      builder: () => GetMaterialApp(
+          debugShowCheckedModeBanner: false,
+          enableLog: true,
+          theme: ThemeData(
+              /*colorScheme: ColorScheme.light(
             primary: const Color(0xff263c7a),
             secondary: const Color(0xfffca311),
             onSecondary: Colors.black,
             onPrimary: Colors.white,
             primaryVariant: const Color(0xff00174d),
             secondaryVariant: const Color(0xffc37400)),*/
-            scaffoldBackgroundColor: backgroundColor,
-            brightness: Brightness.light,
-            accentColor: accentColor,
-            primaryColor: primaryColor,
-            primarySwatch: primarySwatchColor),
-        initialRoute: firstLaunchRoute,
-        getPages: AppPages.pages);
-  }
+              scaffoldBackgroundColor: backgroundColor,
+              brightness: Brightness.light,
+              accentColor: accentColor,
+              primaryColor: primaryColor,
+              primarySwatch: primarySwatchColor),
+          initialRoute: firstLaunchRoute,
+          getPages: AppPages.pages));
 }

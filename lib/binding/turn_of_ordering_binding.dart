@@ -3,7 +3,5 @@ import 'package:get/get.dart';
 
 class TurnOfOrderingBinding extends Bindings {
   @override
-  void dependencies() {
-    Get.lazyPut(() => TurnOfOrderingController());
-  }
+  void dependencies() => Get.lazyPut(() => TurnOfOrderingController());
 }

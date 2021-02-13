@@ -3,7 +3,5 @@ import 'package:get/get.dart';
 
 class BirthDayBinding extends Bindings {
   @override
-  void dependencies() {
-    Get.lazyPut(() => BirthDayController());
-  }
+  void dependencies() => Get.lazyPut(() => BirthDayController());
 }

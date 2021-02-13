@@ -3,7 +3,5 @@ import 'package:get/get.dart';
 
 class AllFindBinding extends Bindings {
   @override
-  void dependencies() {
-    Get.lazyPut(() => AllFindController());
-  }
+  void dependencies() => Get.lazyPut(() => AllFindController());
 }

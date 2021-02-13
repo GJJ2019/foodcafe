@@ -3,7 +3,5 @@ import 'package:get/get.dart';
 
 class OnBoardingBinding extends Bindings {
   @override
-  void dependencies() {
-    Get.lazyPut(() => OnBoardingController());
-  }
+  void dependencies() => Get.lazyPut(() => OnBoardingController());
 }

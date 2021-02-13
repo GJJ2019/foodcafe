@@ -3,7 +3,5 @@ import 'package:get/get.dart';
 
 class ChangePasswordBinding extends Bindings {
   @override
-  void dependencies() {
-    Get.lazyPut(() => ChangePasswordController());
-  }
+  void dependencies() => Get.lazyPut(() => ChangePasswordController());
 }

@@ -3,7 +3,5 @@ import 'package:get/get.dart';
 
 class PastOrderDetailBinging extends Bindings {
   @override
-  void dependencies() {
-    Get.lazyPut(() => PastOrderDetailController());
-  }
+  void dependencies() => Get.lazyPut(() => PastOrderDetailController());
 }

@@ -3,7 +3,5 @@ import 'package:get/get.dart';
 
 class SupportBinding extends Bindings {
   @override
-  void dependencies() {
-    Get.lazyPut(() => SupportController());
-  }
+  void dependencies() => Get.lazyPut(() => SupportController());
 }

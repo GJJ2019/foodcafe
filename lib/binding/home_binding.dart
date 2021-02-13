@@ -12,7 +12,6 @@ class HomeBinding extends Bindings {
 
     Get.lazyPut(() => NotificationFirebaseController());
 
-
     Get.lazyPut(() => DeliveryTypesController());
     Get.lazyPut(() => PauseMenuController());
     Get.lazyPut(() => PastOrderController());
